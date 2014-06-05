@@ -7,7 +7,6 @@ build:
     - npm-install
     # A step that executes `npm test` command
     - npm-test
-    - mocha
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
@@ -16,3 +15,10 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+
+    #tests
+    - script:
+        name: echo tests
+        code: |
+          echo "sails lift"
+          echo "mocha"
