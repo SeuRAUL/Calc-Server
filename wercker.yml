@@ -20,5 +20,5 @@ build:
     - script:
         name: echo tests
         code: |
-          npm install mocha
+          sudo npm install mocha
           mocha
