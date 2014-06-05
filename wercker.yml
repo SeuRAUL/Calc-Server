@@ -19,6 +19,4 @@ build:
     #tests
     - script:
         name: echo tests
-        code: |
-          sails lift
-          mocha
+        code: mocha
