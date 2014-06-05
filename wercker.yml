@@ -20,5 +20,5 @@ build:
     - script:
         name: echo tests
         code: |
-          - sails lift
-          - mocha
+          sails lift
+          mocha
