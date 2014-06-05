@@ -20,5 +20,5 @@ build:
     - script:
         name: tests
         code: |
-          sudo npm install -g mocha
+          sudo npm install -g mocha supertest should assert
           mocha test/testCalc.js
