@@ -1,3 +1,25 @@
+var Sails = require('sails');
+
+// create a variable to hold the instantiated sails server
+var app;
+
+// Global before hook
+before(function(done) {
+
+    // Lift Sails and start the server
+    Sails.lift({
+
+        log: {
+            level: 'error'
+        },
+
+    }, function(err, sails) {
+        app = sails;
+        done(err, sails);
+    });
+});
+
+
 var supertest = require("supertest")
 var assert = require("assert");
 var should = require("should");
@@ -90,3 +112,7 @@ describe('when passing all parameters', function() {
 	})
 
 })
+
+after(function(done) {
+    app.lower(done);
+});
