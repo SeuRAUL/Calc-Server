@@ -19,4 +19,6 @@ build:
     #tests
     - script:
         name: echo tests
-        code: mocha
+        code: |
+          npm install mocha
+          mocha
