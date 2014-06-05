@@ -5,6 +5,7 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+    - sudo npm -g install sails
     # A step that executes `npm test` command
     - npm-test
 
@@ -15,10 +16,11 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+          echo "npm version $(sails -v) running"
 
     #tests
     - script:
-        name: echo tests
+        name: tests
         code: |
           sudo npm install mocha
           mocha
