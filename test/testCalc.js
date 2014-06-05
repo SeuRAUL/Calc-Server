@@ -20,7 +20,7 @@ before(function(done) {
 });
 
 
-var supertest = require("supertest")
+var supertest = require("supertest");
 var assert = require("assert");
 var should = require("should");
 
