@@ -22,13 +22,13 @@ module.exports = {
 		var number2 = req.param("number2");
 		var operation = req.param("operation");
 
-		if (!number1) return res.send(400, {error: "Parameter \'number1\' missing"});
-		if (!number2) return res.send(400, {error: "Parameter \'number2\' missing"});
-		if (!operation) return res.send(400, {error: "Parameter \'operation\' missing"});
+		if (!number1) return res.json({error: "Parameter \'number1\' missing"}, 400);
+		if (!number2) return res.send(400, "Parameter \'number2\' missing");
+		if (!operation) return res.json({error: "Parameter \'operation\' missing"}, 400);
     
     switch (operation) {
       case 'add':
-      	return res.json( parseFloat(number1) + parseFloat(number2) );
+      	return res.json(parseFloat(number1) + parseFloat(number2));
       	break;
       case 'sub':
       	return res.json(number1 - number2);
