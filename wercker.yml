@@ -31,6 +31,4 @@ deploy:
   steps:
     - npm install jitsu -g
     - jitsu users confirm seuraul c422092a-9486-4601-8f3d-e6b5d2652c8e
-      - prompt: yes
-      - prompt: r0xtr00
     - jitsu deploy
