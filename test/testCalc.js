@@ -1,4 +1,9 @@
 var Sails = require('sails');
+var supertest = require("supertest");
+var assert = require("assert");
+var should = require("should");
+
+var url = 'http://localhost:1337/calc';
 
 // create a variable to hold the instantiated sails server
 var app;
@@ -20,11 +25,6 @@ before(function(done) {
 });
 
 
-var supertest = require("supertest");
-var assert = require("assert");
-var should = require("should");
-
-var url = 'http://localhost:1337/calc';
 
 describe('when requesting calcule whithout all the parameters', function() {
 

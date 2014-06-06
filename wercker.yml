@@ -20,5 +20,8 @@ build:
     - script:
         name: tests
         code: |
-          sudo npm install -g mocha supertest should assert
+          sudo npm install -g mocha
+          sudo npm install supertest
+          sudo npm install should
+          sudo npm install assert
           mocha test/testCalc.js
