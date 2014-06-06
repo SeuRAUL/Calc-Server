@@ -26,12 +26,12 @@ build:
           sudo npm install assert
           mocha test/testCalc.js
 
-#deploy
-deploy:
-  steps:
-    -script:
-      name: deploy
-      code: |
-        npm install jitsu -g
-        jitsu users confirm seuraul c422092a-9486-4601-8f3d-e6b5d2652c8e
-        jitsu deploy
+# #deploy
+# deploy:
+#   steps:
+#     -script:
+#       name: deploy
+#       code: |
+#         npm install jitsu -g
+#         jitsu users confirm seuraul c422092a-9486-4601-8f3d-e6b5d2652c8e
+#         jitsu deploy
