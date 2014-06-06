@@ -7,6 +7,11 @@ build:
     - npm-install
     # A step that executes `npm test` command
     - npm-test
+    #A step that install the libraries for tests
+    - sudo npm install -g mocha
+    - sudo npm install supertest
+    - sudo npm install should
+    - sudo npm install assert
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
@@ -19,9 +24,4 @@ build:
     #tests
     - script:
         name: tests
-        code: |
-          sudo npm install -g mocha
-          sudo npm install supertest
-          sudo npm install should
-          sudo npm install assert
-          mocha test/testCalc.js
+        code: mocha test/testCalc.js
