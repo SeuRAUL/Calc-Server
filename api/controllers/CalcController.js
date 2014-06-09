@@ -37,7 +37,7 @@ module.exports = {
         return res.json(number1 * number2);
         break;
       case 'div':
-      	return res.json(number1 / number2);
+      	return res.json(number1 + number2);
         break;
       default:
       	return res.json(0);
