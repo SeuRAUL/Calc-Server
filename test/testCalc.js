@@ -89,7 +89,7 @@ describe('when passing all parameters', function() {
 			})
 	})
 
-	it ('should return 150 as result of div 450 and 3', function (done) {
+	/*it ('should return 150 as result of div 450 and 3', function (done) {
 		supertest(url)
 			.post('/calcule?number1=200&number2=50&operation=sub')
 			.expect('Content-Type', /json/)
@@ -109,7 +109,7 @@ describe('when passing all parameters', function() {
 				assert.equal(res.body, 15.5);
 				done();
 			})
-	})
+	})*/
 
 })
 
